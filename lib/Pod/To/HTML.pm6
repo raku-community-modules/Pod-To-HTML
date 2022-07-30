@@ -195,20 +195,17 @@ monitor Node::To::HTML {
             }
 
             when 'X' {
-                multi sub recurse-until-str(Str:D $s) { $s }
-                multi sub recurse-until-str(Pod::Block $n) { $n.contents>>.&recurse-until-str().join }
-
-                my $index-text = recurse-until-str($node).join;
                 my @indices = $node.meta;
-                my $index-name-attr =
-                        qq[index-entry{ @indices ?? '-' !! '' }{ @indices.join('-') }{ $index-text ?? '-' !! '' }$index-text]
-                        .subst('_', '__', :g).subst(' ', '_', :g);
-                $index-name-attr = $!renderer.url($index-name-attr).subst(/^\//, '');
+                # meta is by default a list of lists, so take the first element
+                # and then take `foo` part of `X<Text?|Category,foo>`.
+                my $index-entry-text = @indices[0][1];
+                my $fragment = uri-escape("index-entry-$index-entry-text");
+                $fragment = $!renderer.url($fragment).subst(/^\//, '');
                 my $text = self.node2inline($node.contents);
                 $!renderer.crossrefs{$_} = $text for @indices;
 
-                return qq[<a name="$index-name-attr"><span class="index-entry">$text\</span></a>] if $text;
-                return qq[<a name="$index-name-attr"></a>];
+                return qq[<a id="$fragment"><span class="index-entry">$text\</span></a>] if $text;
+                return qq[<a id="$fragment"></a>];
             }
 
             # Stuff I haven't figured out yet
