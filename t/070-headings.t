@@ -22,7 +22,7 @@ plan 5;
 
 =head3 Heading 2.2.1
 
-=head3 X<Heading> 2.2.2
+=head3 X<Heading|Category,Heading> 2.2.2
 
 =head1 Heading C<3>
 
@@ -38,7 +38,7 @@ ok so ($0 && $1 && $2), 'hierarchical numbering';
 
 ok so $0, 'link down to heading';
 
-($html ~~ m:g/ ('name="index-entry-Heading"') /);
+($html ~~ m:g/ ('id="index-entry-Heading"') /);
 
 ok so ($0 || $1), 'no X<> anchors in ToC';
 
