@@ -1,7 +1,8 @@
-Pod::To::HTML
-=============
+Pod::To::HTML v0.8.1
+====================
 
 [![Test in a Raku container](https://github.com/Raku/Pod-To-HTML/actions/workflows/test.yaml/badge.svg)](https://github.com/Raku/Pod-To-HTML/actions/workflows/test.yaml)
+
 
 Raku module to render Pod as HTML.
 
