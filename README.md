@@ -1,7 +1,7 @@
 Pod::To::HTML
 =============
 
-[![Build Status](https://travis-ci.com/Raku/Pod-To-HTML.svg?branch=master)](https://travis-ci.com/Raku/Pod-To-HTML)
+[![Test in a Raku container](https://github.com/Raku/Pod-To-HTML/actions/workflows/test.yaml/badge.svg)](https://github.com/Raku/Pod-To-HTML/actions/workflows/test.yaml)
 
 Raku module to render Pod as HTML.
 
