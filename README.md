@@ -30,7 +30,7 @@ Installation
 
 From the [Raku ecosystem](https://modules.raku.org):
 
-    $ zef install Pod::To::HTML:auth<Raku>
+    $ zef install Pod::To::HTML:author<github:Raku>
 
 From source:
 
