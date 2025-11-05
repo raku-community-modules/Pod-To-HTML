@@ -1,6 +1,8 @@
 use Pod::To::HTML;
 use Test;
 
+plan 1;
+
 =begin pod
 
 =begin para :property<cool>
@@ -22,4 +24,4 @@ class Node::To::HTML::Custom is Node::To::HTML {
 like Pod::To::HTML.new(node-renderer => Node::To::HTML::Custom).render($=pod),
         /'Nice, cool render!'/, 'Config in a paragraph was understood';
 
-done-testing;
+# vim: expandtab shiftwidth=4

@@ -1,5 +1,6 @@
 use Test;
 use Pod::To::HTML;
+
 plan 1;
 
 my $question-mark = Pod::FormattingCode.new(
@@ -10,4 +11,4 @@ my $question-mark = Pod::FormattingCode.new(
 
 ok pod2html($question-mark) ~~ /\%3F/;
 
-
+# vim: expandtab shiftwidth=4

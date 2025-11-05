@@ -1,9 +1,10 @@
 use Test;
 use Pod::To::HTML;
+
 plan 2;
 
 =begin pod
-=head2 Rendering Perl 6 with no-break space
+=head2 Rendering Raku Programming with no-break space
 
 Nothing to see here
 
@@ -15,4 +16,6 @@ Nothing to see here either
 my $r = pod2html $=pod;
 
 ok $r ~~ m/\#What\'s_wrong/;
-ok $r ~~ m/\#Rendering_Perl_6/;
+ok $r ~~ m/\#Rendering_Raku_Programming/;
+
+# vim: expandtab shiftwidth=4

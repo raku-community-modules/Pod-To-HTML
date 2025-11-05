@@ -1,6 +1,8 @@
 use Test;
 use Pod::To::HTML;
+
 plan 3;
+
 my $r;
 
 =begin pod
@@ -80,3 +82,5 @@ ok $r ~~ ms[[
         '</ul>'
     '</ul>'
 ]];
+
+# vim: expandtab shiftwidth=4

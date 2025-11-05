@@ -1,12 +1,6 @@
-2018-12-18  Juan J. merelo  <jmerelo@penny>
+Revision history for Pod::To::HTML
 
-	* META6.json: Bumps up version to account for minimum Pod::Load version requirements. 
-
-2018-12-14  Juan J. merelo  <jmerelo@penny>
-
-	* 011-external.t: Adds test mainly for integration with GitHub, and avoiding prepending package names to defined classes.
-	
-2018-12-11  Juan J. merelo  <jmerelo@penny>
-
-	* META6.json: Bumps up to 0.4.1 after fixing the problem of URIzing titles and subtitles. 
-
+{{$NEXT}}
+    - First version as a Raku Community Module
+    - Older Changelog did not contain any changes after 2018
+      so was basically useless

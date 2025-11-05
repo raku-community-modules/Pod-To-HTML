@@ -45,5 +45,7 @@ my %*POD2HTML-CALLBACKS = code => sub (:$node, :&default) {
     ok $node.contents ~~ /:i code/, 'Callback called';
 }
 
-# say $=pod[0].perl;
+# say $=pod[0].raku;
 pod2html $=pod[0];
+
+# vim: expandtab shiftwidth=4

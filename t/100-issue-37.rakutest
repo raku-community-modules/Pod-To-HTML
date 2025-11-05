@@ -1,4 +1,3 @@
-use v6;
 use Test;
 use Pod::To::HTML;
 
@@ -14,3 +13,5 @@ is-deeply node2html(
     Pod::FormattingCode.new: 
         :type<L>, :meta[], :config{}, :contents["Array"]
 ), '<a href="Array">Array</a>', 'no crash in node2html with L<>';
+
+# vim: expandtab shiftwidth=4

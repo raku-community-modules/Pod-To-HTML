@@ -1,5 +1,3 @@
-#!perl6
-
 use Test;
 
 # do NOT move this below `Pod::To::HTML` line, the module exports a fake Pod::Defn
@@ -41,3 +39,5 @@ ok $html ~~ ms[[
 
 '</dl>'
 ]], 'generated html for =defn';
+
+# vim: expandtab shiftwidth=4

@@ -1,4 +1,4 @@
-use Test; # -*- mode: perl6 -*-
+use Test;
 use Pod::To::HTML;
 
 plan 4;
@@ -9,7 +9,7 @@ my $r;
   col1  col2
 
 $r = pod2html $=pod[0];
-#say $r.perl;
+#say $r.raku;
 ok $r ~~ ms[[
     '<table class="pod-table">'
       '<tbody>'
@@ -27,7 +27,7 @@ ok $r ~~ ms[[
   col1  col2
 
 $r = pod2html $=pod[1];
-#say $r.perl;
+#say $r.raku;
 ok $r ~~ ms[[
     '<table class="pod-table">'
       '<thead>'
@@ -57,7 +57,7 @@ ok $r ~~ ms[[
 =end table
 
 $r = pod2html $=pod[2];
-#say $r.perl;
+#say $r.raku;
 ok $r ~~ ms[[
     '<table class="pod-table sorttable">'
       '<thead>'
@@ -106,3 +106,5 @@ ok $r ~~ ms[[
       '</tbody>'
     '</table>'
 ]];
+
+# vim: expandtab shiftwidth=4

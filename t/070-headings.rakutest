@@ -1,4 +1,3 @@
-use v6;
 use Test;
 use Pod::To::HTML;
 
@@ -49,3 +48,5 @@ ok so $0, 'Proper rendering of heading';
 ($html ~~ m:g/ ('<h1 id="Heading_3"><a class="u" href="#___top" title="go to top of document">Heading <code>3</code></a></h1>') /);
 
 ok so $0, 'Proper rendering of heading from multiple nodes';
+
+# vim: expandtab shiftwidth=4

@@ -52,3 +52,5 @@ sub get-display-text($html) {
     $html ~~ /\>$<cm>=<-["]>+\</;
     return $<cm>.Str;
 }
+
+# vim: expandtab shiftwidth=4

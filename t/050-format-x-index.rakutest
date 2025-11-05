@@ -1,5 +1,6 @@
 use Test;
 use Pod::To::HTML;
+
 plan 3;
 
 =begin pod
@@ -45,3 +46,5 @@ like $r, /
     .+ 'to index ' .+ 'index-entry-defining__a_term-hierarchical_items' .+ '<span' .+ '>hierarchical items</span>'
     .+ 'index the ' .+ '>same place</span>'
     /,  'Text with indexed items correct';
+
+# vim: expandtab shiftwidth=4

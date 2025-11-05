@@ -1,26 +1,39 @@
 {
-    "perl"        : "6.d",
-    "name"        : "Pod::To::HTML",
-    "version"     : "v0.8.1",
-    "auth"        : "github:Raku",
-    "authors"     : [ "Raku Community modules" ],
-    "description" : "Convert Raku Pod to HTML",
-    "license"     : "Artistic-2.0",
-    "depends"     : [
-        "URI",
-        "Template::Mustache",
-        "Pod::Load:ver<0.4.0+>",
-        "OO::Monitors"
-    ],
-    "test-depends": [
-        "Test::Output"
-    ],
-    "provides"     : {
-        "Pod::To::HTML" : "lib/Pod/To/HTML.pm6"
+  "auth": "github:Raku",
+  "authors": [
+    "Raku Community modules"
+  ],
+  "depends": {
+    "runtime": {
+      "requires": [
+        "URI::Escape:ver<0.3.8+>:auth<zef:raku-community-modules>",
+        "Template::Mustache:ver<1.2.4+>:auth<zef:raku-community-modules>:api<1.2.0>",
+        "Pod::Load:ver<0.7.2+>:auth<zef:jjmerelo>",
+        "OO::Monitors:ver<1.1.7+>:auth<zef:raku-community-modules>"
+      ]
     },
-    "resources": [
-        "templates/main.mustache",
-        "css/github.css"
-    ],
-    "source-url"  : "git://github.com/Raku/Pod-To-HTML.git"
+    "test": {
+      "requires": [
+        [
+          "Test::Output"
+        ]
+      ]
+    }
+  },
+  "description": "Convert Raku Pod to HTML",
+  "license": "Artistic-2.0",
+  "name": "Pod::To::HTML",
+  "provides": {
+    "Pod::To::HTML": "lib/Pod/To/HTML.rakumod"
+  },
+  "raku": "6.d",
+  "resources": [
+    "templates/main.mustache",
+    "css/github.css"
+  ],
+  "support": {
+    "bugtracker": null,
+    "source": "git://github.com/Raku/Pod-To-HTML.git"
+  },
+  "version": "v0.8.1"
 }

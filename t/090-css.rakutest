@@ -1,4 +1,3 @@
-use v6;
 use Test;
 use Pod::To::HTML;
 
@@ -10,7 +9,7 @@ Je suis Napoleon!
 
 =end pod
 
-like pod2html($=pod, :css('https://design.raku.org/perl.css')),
+like pod2html($=pod, :css('https://design.raku.org/raku.css')),
     /'<link rel="stylesheet" href='/, 'inclusion of CSS stylesheet in default template';
 
 unlike pod2html($=pod, :lang<fr>, :css('')),
@@ -20,3 +19,5 @@ unlike pod2html($=pod, :lang<fr>, :css('')),
 unlike pod2html($=pod, :lang<fr>),
     /'<link rel="stylesheet" href='/,
     'not providing the css template variable also disables CSS inclusion';
+
+# vim: expandtab shiftwidth=4
