@@ -1,20 +1,17 @@
 =begin pod
 =head1 Pod::To::HTML
 
-[![Build Status](https://travis-ci.org/perl6/Pod-To-HTML.svg?branch=master)](https://travis-ci.org/perl6/Pod-To-HTML)
-
 Raku module to render Pod as HTML.
 
 =head2 Synopsis
 
 From the command line:
 
-=for code
-raku --doc=HTML lib/FancyModule.rakumod > FancyModule.html
+=output $ raku --doc=HTML lib/FancyModule.rakumod > FancyModule.html
 
 From within Raku:
 
-=begin code
+=begin code :lang<raku>
 use Pod::To::HTML;
 
 # Pod file
@@ -30,24 +27,14 @@ say render(
 
 From the L«Raku ecosystem|https://modules.raku.org»:
 
-=code $ zef install Pod::To::HTML
+=output $ zef install Pod::To::HTML
 
 From source:
 
 =for code
-$ git clone https://github.com/perl6/Pod-To-HTML.git
+$ git clone https://github.com/raku-community-modules/Pod-To-HTML.git
 $ cd Pod-To-HTML/
 $ zef install .
-
-B<Note>: Perl 6 2018.06 introduces changes on how non-breaking
-  whitespace was handled; this is now included in the tests. If
-  the installation fails, please upgrade to Perl 6 >= 2018.06 or
-  simply disregard the test and install with C<--force> if that
-  particular feature is of no use to you.
-
-B<Note 2>: Perl6 2018.11 introduced handling of Definition blocks,
-C<Defn>. Please upgrade if you are using that feature in the
-documentation.
 
 =head2 Description
 
@@ -87,27 +74,28 @@ template:
 =item C<title>: This is picked up from the Pod's semantic block C<=TITLE>
 (if any), although it can be overridden by supplying it via C<render>.
 It defaults to the empty string.
+
 =item C<subtitle>: This is picked up from the Pod's semantic block C<=SUBTITLE>
 (if any), although it can be overridden by supplying it via C<render>.
 It defaults to the empty string.
+
 =item C<lang>: This is picked up from the Pod's semantic block C<=LANG>
 (if any), although it can be overridden by supplying it via C<render>.
 It defaults to the C<en>.
+
 =item C<toc>: The Pod document's table of contents.
+
 =item C<footnotes>: The Pod document's L<footnotes|https://docs.raku.org/language/pod#Notes>.
 
-
 Additional information can be made available to the Mustache template
-by supplying to C<render> as named arguments. For example,
-C«css-url => https://design.raku.org/perl.css» will be available to the
-template as C<css-url>.
+by supplying to C<render> as named arguments.
 
 =head3 Semantic Blocks
 
 Semantic blocks are treated as metadata and supplied as such to a Mustache
 template. For example, from the Pod document:
 
-=begin code
+=begin code :lang<raku>
 =begin pod
 =TITLE Classes and objects
 =SUBTITLE A tutorial about creating and using classes in Raku
@@ -116,7 +104,7 @@ template. For example, from the Pod document:
 =end pod
 =end code
 
-the template variables C<title>, C<subtitle>, C<lang>, and C<date> are made
+The template variables C<title>, C<subtitle>, C<lang>, and C<date> are made
 available to a Mustache template. Both C<title> and C<subtitle> can be
 overridden via the C<render> subroutine.
 
@@ -131,18 +119,40 @@ you download from source) for a few illustrative examples.
 
 =head2 Debugging
 
-You can set the C«P6DOC_DEBUG» environmental variable to make the
+You can set the C«RAKUDOC_DEBUG» environmental variable to make the
 module produce some debugging information.
 
 =for code
-P6DOC_DEBUG=1 raku --doc=HTML lib/FancyModule.rakumod > FancyModule.html
+RAKUDOC_DEBUG=1 raku --doc=HTML lib/FancyModule.rakumod > FancyModule.html
 
-=head2 License
+=head1 AUTHORS
 
-You can use and distribute this module under the terms of the
-The Artistic License 2.0. See the LICENSE file included in this distribution for
-complete details.
+=item Anthony Parsons
+=item Moritz Lenz
+=item Timo Paulssen
+=item Alex Moquin
+=item Wenzel P. P. Peppmeyer
+=item Zoffix Znet
+=item Alex Chen
+=item JJ Merelo
+=item Jonathan Stowe
+=item Richard Hainsworth
+=item Antonio Gamiz
+=item Oleksander Kiryuhin
+=item Elizabeth Mattijsen
+
+And many other Raku Community members.
+
+Source can be located at: https://github.com/raku-community-modules/Pod-To-HTML .
+Comments and Pull Requests are welcome.
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2011-2025 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 The C«META6.json» file of this distribution may be distributed and modified
 without restrictions or attribution.
+
 =end pod

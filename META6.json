@@ -3,6 +3,8 @@
   "authors": [
     "Raku Community modules"
   ],
+  "build-depends": [
+  ],
   "depends": {
     "runtime": {
       "requires": [
@@ -31,9 +33,14 @@
     "templates/main.mustache",
     "css/github.css"
   ],
+  "source-url": "https://github.com/raku-community-modules/Pod-To-HTML.git",
   "support": {
     "bugtracker": null,
     "source": "git://github.com/Raku/Pod-To-HTML.git"
   },
+  "tags": [
+  ],
+  "test-depends": [
+  ],
   "version": "v0.8.1"
 }
