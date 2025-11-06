@@ -19,7 +19,7 @@ sub test-files( $possible-file-path ) {
     my $r = node2html $pod;
     ok( $r, "Converting external" );
     unlike( $r, /Pod\:\:To/, "Is not prepending class name" );
-    $r = pod2html($pod, :header(''), :footer(''), :head(''), :default-title(''), :lang('en'));
+    $r = pod2html($pod, :header(''), :footer(''), :meta(''), :default-title(''), :lang('en'));
     unlike( $r, /Pod\:\:To/, "Is not prepending class name" );
 }
 
