@@ -3,19 +3,19 @@ use URI::Escape:ver<0.3.8+>:auth<zef:raku-community-modules>; # uri_escape
 use Template::Mustache:ver<1.2.4+>:auth<zef:raku-community-modules>:api<1.2.0>;
 use Pod::Load:ver<0.7.2+>:auth<zef:jjmerelo>;
 
-class Pod::List is Pod::Block {};
-class Pod::DefnList is Pod::Block {};
-BEGIN { if ::('Pod::Defn') ~~ Failure { CORE::Pod::<Defn> := class {} } }
+my class Pod::List is Pod::Block {};
+my class Pod::DefnList is Pod::Block {};
+BEGIN { if ::('Pod::Defn') ~~ Failure { CORE::Pod::<Defn> := my class {} } }
 class Node::To::HTML {...}  # UNCOVERABLE
-class TOC::Calculator {...}  # UNCOVERABLE
+my class TOC::Calculator {...}  # UNCOVERABLE
 
-role Pod::To::HTML::Renderer {  # UNCOVERABLE
+my role Pod::To::HTML::Renderer {  # UNCOVERABLE
     method render(%context) {  # UNCOVERABLE
         ...
     }
 }
 
-class Pod::To::HTML::Mustache does Pod::To::HTML::Renderer {
+my class Pod::To::HTML::Mustache does Pod::To::HTML::Renderer {
     has $.template;
     has $.main-template-path;
 
@@ -516,15 +516,15 @@ monitor Node::To::HTML {
     }
 }
 
-sub pod2html($pod, *%nameds --> Str:D) is export {
+my sub pod2html($pod, *%nameds --> Str:D) is export {
     Pod::To::HTML.new(|%nameds).render($pod)
 }
 
-sub node2html(*@pos, *%nameds --> Str:D) is export {
+my sub node2html(*@pos, *%nameds --> Str:D) is export {
     Node::To::HTML.new(:renderer(Pod::To::HTML.new)).node2html(|@pos, |%nameds)
 }
 
-proto sub render(|) is export {*}
+my proto sub render(|) is export {*}
 multi sub render(
   Any:D $pod,
   Str  :$title,
@@ -554,9 +554,9 @@ multi sub render(
 
 my $debug := %*ENV<P6DOC_debug> // %*ENV<RAKUDO_DEBUG>;
 
-sub debug(&message) { message() if $debug }
+my sub debug(&message) { message() if $debug }
 
-sub escape_html(Str $str --> Str) {
+my sub escape_html(Str $str --> Str) {
     $str ~~ /<[ & < > " ' {   ]>/ || $str ~~ / ' ' /
       ?? $str.trans:
            [q{&},     q{<},    q{>},    q{"},      q{'},     q{ }     ] =>
@@ -564,13 +564,13 @@ sub escape_html(Str $str --> Str) {
       !! $str
 }
 
-sub unescape_html(Str $str --> Str) {
+my sub unescape_html(Str $str --> Str) {
     $str.trans:
       [rx{'&amp;'}, rx{'&lt;'}, rx{'&gt;'}, rx{'&quot;'}, rx{'&#39;'}] =>
       [q{&},        q{<},       q{>},       q{"},         q{'}       ]
 }
 
-sub escape_id ($id) is export {
+my sub escape_id ($id) is export {
     $id.trim
       .subst(/\s+/, '_', :g)
       .subst('"', '&quot;', :g)
@@ -578,6 +578,7 @@ sub escape_id ($id) is export {
       .subst('&#39;', "'", :g)
 }
 
+my proto sub visit(|) {*}
 multi visit(Nil, |a) {
     debug {
         note colored("visit called for Nil", "bold")
@@ -603,9 +604,9 @@ multi visit($root, :&pre, :&post, :&assemble = -> *% { Nil }) {
 # &colored = -> $t, $c { $t };
 #}
 
-sub colored($text, $how) { $text }
+my sub colored($text, $how) { $text }
 
-sub assemble-list-items(:@content, :$node, *%) {
+my sub assemble-list-items(:@content, :$node, *%) {
     my @newcont;
     my $found-one = False;
     my $ever-warn = False;
@@ -675,7 +676,7 @@ sub assemble-list-items(:@content, :$node, *%) {
       !! $node
 }
 
-sub retrieve-templates($template-path, $main-template-path --> List:D) {
+my sub retrieve-templates($template-path, $main-template-path --> List:D) {
     sub get-partials($template-path --> Hash:D) {
         my $partials-dir = 'partials';
         my %partials;
@@ -709,7 +710,7 @@ sub retrieve-templates($template-path, $main-template-path --> List:D) {
     $template-file, %partials
 }
 
-monitor TOC::Calculator {
+my monitor TOC::Calculator {
     has     $.pod is required;
     has int @.levels = 0;
 
@@ -831,7 +832,7 @@ my sub node2text($node --> Str:D) {
 }
 
 # plain, unescaped text
-sub node2rawtext($node --> Str:D) is export {
+my sub node2rawtext($node --> Str:D) is export {
     debug {
         note colored("Generic node2rawtext called with ", "red")
           ~ $node.raku
