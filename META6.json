@@ -15,6 +15,8 @@
     "Oleksander Kiryuhin",
     "Elizabeth Mattijsen"
   ],
+  "build-depends": [
+  ],
   "depends": {
     "runtime": {
       "requires": [
@@ -43,12 +45,19 @@
     "templates/main.mustache",
     "css/github.css"
   ],
+  "source-url": "https://github.com/raku-community-modules/Pod-To-HTML.git",
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/Pod-To-HTML/issues",
     "email": "community@raku.org",
-    "source": "git://github.com/Raku/Pod-To-HTML.git"
+    "source": "https://github.com/raku-communit-modules/Pod-To-HTML.git"
   },
-  "tags": [ "POD", "HTML", "RAKUDOC", "DOC"
+  "tags": [
+    "POD",
+    "HTML",
+    "RAKUDOC",
+    "DOC"
   ],
-  "version": "0.8.1"
+  "test-depends": [
+  ],
+  "version": "0.9.0"
 }

@@ -25,7 +25,7 @@ say render(
 
 =head2 Installation
 
-From the L«Raku ecosystem|https://modules.raku.org»:
+From the L«Raku ecosystem|https://raku.land»:
 
 =output $ zef install Pod::To::HTML
 

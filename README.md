@@ -29,7 +29,7 @@ say render(
 Installation
 ------------
 
-From the [Raku ecosystem](https://modules.raku.org):
+From the [Raku ecosystem](https://raku.land):
 
     $ zef install Pod::To::HTML
 

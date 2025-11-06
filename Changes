@@ -1,6 +1,8 @@
 Revision history for Pod::To::HTML
 
 {{$NEXT}}
+
+0.9.0  2025-11-06T16:04:06+01:00
     - First version as a Raku Community Module
     - Tighten dependencies
     - Moderniz and streamlinex code
