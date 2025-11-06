@@ -1,0 +1,13 @@
+Revision history for Pod::To::HTML
+
+{{$NEXT}}
+    - First version as a Raku Community Module
+    - Tighten dependencies
+    - Moderniz and streamlinex code
+    - Update documentation
+    - Use modern file extensions
+    - Some micro-optimizations
+    - Add preliminary coverage testing
+    - Add CI badge for each OS
+    - Older Changelog did not contain any changes before or
+      after 2018 so was basically useless, and thus removed

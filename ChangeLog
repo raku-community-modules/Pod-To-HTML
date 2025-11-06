@@ -1,6 +1,0 @@
-Revision history for Pod::To::HTML
-
-{{$NEXT}}
-    - First version as a Raku Community Module
-    - Older Changelog did not contain any changes after 2018
-      so was basically useless

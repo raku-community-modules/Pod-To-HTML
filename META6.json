@@ -1,9 +1,19 @@
 {
-  "auth": "github:Raku",
+  "auth": "zef:raku-community-modules",
   "authors": [
-    "Raku Community modules"
-  ],
-  "build-depends": [
+    "Anthony Parsons",
+    "Moritz Lenz",
+    "Timo Paulssen",
+    "Alex Moquin",
+    "Wenzel P. P. Peppmeyer",
+    "Zoffix Znet",
+    "Alex Chen",
+    "JJ Merelo",
+    "Jonathan Stowe",
+    "Richard Hainsworth",
+    "Antonio Gamiz",
+    "Oleksander Kiryuhin",
+    "Elizabeth Mattijsen"
   ],
   "depends": {
     "runtime": {
@@ -33,14 +43,12 @@
     "templates/main.mustache",
     "css/github.css"
   ],
-  "source-url": "https://github.com/raku-community-modules/Pod-To-HTML.git",
   "support": {
-    "bugtracker": null,
+    "bugtracker": "https://github.com/raku-community-modules/Pod-To-HTML/issues",
+    "email": "community@raku.org",
     "source": "git://github.com/Raku/Pod-To-HTML.git"
   },
-  "tags": [
+  "tags": [ "POD", "HTML", "RAKUDOC", "DOC"
   ],
-  "test-depends": [
-  ],
-  "version": "v0.8.1"
+  "version": "0.8.1"
 }
