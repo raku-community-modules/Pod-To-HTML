@@ -49,7 +49,7 @@
   "support": {
     "bugtracker": "https://github.com/raku-community-modules/Pod-To-HTML/issues",
     "email": "community@raku.org",
-    "source": "https://github.com/raku-communit-modules/Pod-To-HTML.git"
+    "source": "https://github.com/raku-community-modules/Pod-To-HTML.git"
   },
   "tags": [
     "POD",
