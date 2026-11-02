@@ -30,7 +30,7 @@ my sub escape_uri_char(Str:D $c --> Str:D) {
 sub escape_str(Str:D $str, &callback --> Str:D) {
     my $result = '';
     for ^$str.chars -> $index {
-        $result ~= $callback($str.substr: $index, 1)
+        $result ~= callback($str.substr: $index, 1)
     }
     $result
 }
