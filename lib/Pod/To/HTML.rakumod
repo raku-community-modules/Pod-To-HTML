@@ -1,6 +1,6 @@
 use OO::Monitors:ver<1.1.7+>:auth<zef:raku-community-modules>;
 use URI::Escape:ver<0.3.8+>:auth<zef:raku-community-modules>; # uri_escape
-use Template::Mustache:ver<1.2.4+>:auth<zef:raku-community-modules>:api<1.2.0>;
+use Template::Mustache:ver<1.2.7+>:auth<zef:raku-community-modules>:api<1.2.0>;
 use Pod::Load:ver<0.7.2+>:auth<zef:jjmerelo>;
 
 my class Pod::List is Pod::Block {};

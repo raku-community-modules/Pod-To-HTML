@@ -20,8 +20,8 @@
   "depends": {
     "runtime": {
       "requires": [
-        "URI::Escape:ver<0.3.8+>:auth<zef:raku-community-modules>",
-        "Template::Mustache:ver<1.2.4+>:auth<zef:raku-community-modules>:api<1.2.0>",
+        "URI:ver<0.3.8+>:auth<zef:raku-community-modules>",
+        "Template::Mustache:ver<1.2.7+>:auth<zef:raku-community-modules>:api<1.2.0>",
         "Pod::Load:ver<0.7.2+>:auth<zef:jjmerelo>",
         "OO::Monitors:ver<1.1.7+>:auth<zef:raku-community-modules>"
       ]
@@ -39,7 +39,7 @@
   "name": "Pod::To::HTML",
   "provides": {
     "Pod::To::HTML": "lib/Pod/To/HTML.rakumod",
-    "Text::Escape": "lib/Text/Escape.pm"
+    "Text::Escape": "lib/Text/Escape.rakumod"
   },
   "raku": "6.d",
   "resources": [
@@ -60,5 +60,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.9.1"
+  "version": "0.9.2"
 }

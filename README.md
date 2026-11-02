@@ -143,7 +143,7 @@ Source can be located at: https://github.com/raku-community-modules/Pod-To-HTML 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2011-2025 Raku Community
+Copyright 2011 - 2026 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

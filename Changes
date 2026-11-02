@@ -2,6 +2,11 @@ Revision history for Pod::To::HTML
 
 {{$NEXT}}
 
+0.9.2  2026-11-02T19:55:06+01:00
+    - Modernize internal Text::Escape module
+    - Tighten up dependencies
+    - Update copyright year
+
 0.9.1  2026-11-02T18:24:49+01:00
     - Fix rendering test, ugexe++
 

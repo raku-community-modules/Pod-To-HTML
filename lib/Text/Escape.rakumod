@@ -1,13 +1,10 @@
-use v6;
-module Text::Escape;
-
-sub escape_html($str as Str) {
+my sub escape_html(Str:D $str) {
     $str.subst('&', '&amp;', :g).subst('<', '&lt;', :g
          ).subst('>', '&gt;', :g).subst('"', '&quot;', :g
          ).subst("'", '&#39;', :g);
 }
 
-sub escape($str as Str, Str $how) is export {
+my sub escape(Str:D $str, Str:D $how) is export {
     given $how.lc {
         when 'none'         { $str }
         when 'html'         { escape_html($str) }
@@ -16,10 +13,10 @@ sub escape($str as Str, Str $how) is export {
     }
 }
 
-sub escape_uri_char(Str $c) returns Str {
+my sub escape_uri_char(Str:D $c --> Str:D) {
     return q{+} if $c eq q{ };
 
-    my $allowed = 'abcdefghijklmnopqrstuvwxyz'
+    my constant $allowed = 'abcdefghijklmnopqrstuvwxyz'
                 ~ 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
                 ~ '0123456789'
                 ~ q{-_.!~*'()};
@@ -27,15 +24,15 @@ sub escape_uri_char(Str $c) returns Str {
     return $c if defined $allowed.index($c);
 
     # TODO: each char should be UTF-8 encoded, then its bytes %-encoded
-    return q{%} ~ ord($c).fmt('%x');
+    q{%} ~ ord($c).fmt('%x');
 }
 
-sub escape_str(Str $str, Callable $callback) returns Str {
+sub escape_str(Str:D $str, &callback --> Str:D) {
     my $result = '';
     for ^$str.chars -> $index {
         $result ~= $callback($str.substr: $index, 1)
     }
-    return $result;
+    $result
 }
 
-# vim:ft=perl6
+# vim: expandtab shiftwidth=4
