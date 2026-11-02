@@ -24,8 +24,8 @@ This is an ordinary paragraph
 
     =head1 Mumble: "mumble"
 
-    Suprisingly, this is not a code block
-        (with fancy indentation too)
+This is not a code block
+    (with fancy indentation too)
 
 But this is just a text. Again
 
@@ -38,7 +38,7 @@ ok $r ~~ ms[['<p>' 'This is an ordinary paragraph' '</p>'
 '<h1 id="Mumble:_&quot;mumble&quot;">' '<a class="u" href="#___top" title="go to top of document">'
     'Mumble: &quot;mumble&quot;'
 '</a>' '</h1>'
-'<p>' 'Suprisingly, this is not a code block (with fancy indentation too)' '</p>'
+'<p>' 'This is not a code block (with fancy indentation too)' '</p>'
 '<p>' 'But this is just a text. Again' '</p>']];
 
 my %*POD2HTML-CALLBACKS = code => sub (:$node, :&default) {
