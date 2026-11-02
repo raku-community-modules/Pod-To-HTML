@@ -4,7 +4,7 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-11-06T15:00:08+00:00",
+    "timestamp": "2026-11-02T17:25:12+00:00",
     "lifecycles": [
       {
         "phase": "pre-build"
@@ -67,7 +67,7 @@
     "component": {
       "type": "library",
       "mime-type": "text/plain",
-      "bom-ref": "pkg:raku/zef:raku-community-modules/Pod::To::HTML@0.9.0",
+      "bom-ref": "pkg:raku/zef:raku-community-modules/Pod::To::HTML@0.9.1",
       "authors": [
         {
           "bom-ref": "AnthonyParsons",
@@ -125,7 +125,7 @@
       "publisher": "zef",
       "group": "zef:raku-community-modules",
       "name": "Pod::To::HTML",
-      "version": "0.9.0",
+      "version": "0.9.1",
       "description": "Convert Raku Pod to HTML",
       "scope": "required",
       "licenses": [
@@ -137,14 +137,14 @@
           }
         }
       ],
-      "purl": "pkg:raku/zef:raku-community-modules/Pod::To::HTML@0.9.0",
+      "purl": "pkg:raku/zef:raku-community-modules/Pod::To::HTML@0.9.1",
       "externalReferences": [
         {
-          "url": "https://github.com/raku-communit-modules/Pod-To-HTML",
+          "url": "https://github.com/raku-community-modules/Pod-To-HTML",
           "type": "distribution"
         },
         {
-          "url": "https://raku.land/zef:raku-community-modules/Pod::To::HTML?v=0.9.0",
+          "url": "https://raku.land/zef:raku-community-modules/Pod::To::HTML?v=0.9.1",
           "type": "documentation"
         },
         {
@@ -156,7 +156,7 @@
           "type": "license"
         },
         {
-          "url": "https://github.com/raku-communit-modules/Pod-To-HTML/archive/refs/tags/0.9.0.zip",
+          "url": "https://github.com/raku-community-modules/Pod-To-HTML/archive/refs/tags/0.9.1.zip",
           "type": "source-distribution"
         },
         {
@@ -185,7 +185,7 @@
         {
           "type": "library",
           "mime-type": "text/plain",
-          "bom-ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.12",
+          "bom-ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
           "authors": [
             {
               "bom-ref": "ElizabethMattijsen",
@@ -195,7 +195,7 @@
           "publisher": "zef",
           "group": "zef:lizmat",
           "name": "SBOM::Raku",
-          "version": "0.0.12",
+          "version": "0.0.14",
           "description": "Raku specific SBOM functionality",
           "scope": "required",
           "licenses": [
@@ -207,27 +207,23 @@
               }
             }
           ],
-          "purl": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.12",
+          "purl": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
           "externalReferences": [
             {
-              "url": "https://github.com/lizmat/SBOM-Raku",
+              "url": "https://codeberg.org/lizmat/SBOM-Raku",
               "type": "distribution"
             },
             {
-              "url": "https://raku.land/zef:lizmat/SBOM::Raku?v=0.0.12",
+              "url": "https://raku.land/zef:lizmat/SBOM::Raku?v=0.0.14",
               "type": "documentation"
             },
             {
-              "url": "https://github.com/lizmat/SBOM-Raku/issues",
+              "url": "https://codeberg.org/lizmat/SBOM-Raku/issues",
               "type": "issue-tracker"
             },
             {
               "url": "https://spdx.org/licenses/Artistic-2.0.json",
               "type": "license"
-            },
-            {
-              "url": "https://github.com/lizmat/SBOM-Raku/archive/refs/tags/0.0.12.zip",
-              "type": "source-distribution"
             },
             {
               "url": "mailto:liz@raku.rocks",
@@ -256,7 +252,7 @@
       "publisher": "Rakudo Core Developers",
       "group": "Rakudo Core Developers",
       "name": "Rakudo",
-      "version": "2025.10-29-g690b7f07a",
+      "version": "2026.09-232-gc6d6fc3c6b",
       "description": "The Rakudo™ Compiler implementing the Raku® Programming Language",
       "scope": "required",
       "licenses": [
@@ -268,7 +264,7 @@
           }
         }
       ],
-      "copyright": "© 2006 - 2025 Yet Another Society",
+      "copyright": "© 2006 - 2026 Yet Another Society",
       "externalReferences": [
         {
           "url": "https://github.com/rakudo/rakudo",
@@ -279,7 +275,7 @@
           "type": "issue-tracker"
         },
         {
-          "url": "https://github.com/rakudo/rakudo/archive/690b7f07a.zip",
+          "url": "https://github.com/rakudo/rakudo/archive/c6d6fc3c6b.zip",
           "type": "source-distribution"
         },
         {
@@ -300,7 +296,7 @@
       "publisher": "The MoarVM Team",
       "group": "The MoarVM Team",
       "name": "Moar",
-      "version": "2025.10-8-g36fcd3d1f",
+      "version": "2026.09-39-g71a33965f",
       "description": "Short for \"Metamodel On A Runtime\", MoarVM is a modern virtual machine built for the Rakudo compiler and the NQP Compiler Toolchain.",
       "scope": "required",
       "licenses": [
@@ -312,7 +308,7 @@
           }
         }
       ],
-      "copyright": "© 2012 - 2025 Jonathan Worthington",
+      "copyright": "© 2012 - 2026 Jonathan Worthington",
       "externalReferences": [
         {
           "url": "https://github.com/MoarVM/MoarVM",
@@ -327,7 +323,7 @@
           "type": "chat"
         },
         {
-          "url": "https://github.com/MoarVM/MoarVM.git/archive/refs/tags/36fcd3d1f.zip",
+          "url": "https://github.com/MoarVM/MoarVM.git/archive/refs/tags/71a33965f.zip",
           "type": "source-distribution"
         }
       ]
@@ -588,7 +584,7 @@
       "publisher": "zef",
       "group": "zef:raku-community-modules",
       "name": "Template::Mustache",
-      "version": "1.2.4",
+      "version": "1.2.7",
       "description": "A logic-free, cross-language templating format",
       "scope": "required",
       "licenses": [
@@ -600,14 +596,14 @@
           }
         }
       ],
-      "purl": "pkg:raku/zef:raku-community-modules/Template::Mustache@1.2.4:1.2.0",
+      "purl": "pkg:raku/zef:raku-community-modules/Template::Mustache@1.2.7:1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/raku-community-modules/Template-Mustache",
           "type": "distribution"
         },
         {
-          "url": "https://raku.land/zef:raku-community-modules/Template::Mustache?v=1.2.4",
+          "url": "https://raku.land/zef:raku-community-modules/Template::Mustache?v=1.2.7",
           "type": "documentation"
         },
         {
@@ -619,7 +615,7 @@
           "type": "license"
         },
         {
-          "url": "https://github.com/raku-community-modules/Template-Mustache/archive/refs/tags/1.2.4.zip",
+          "url": "https://github.com/raku-community-modules/Template-Mustache/archive/refs/tags/1.2.7.zip",
           "type": "source-distribution"
         },
         {
@@ -686,11 +682,11 @@
   ],
   "externalReferences": [
     {
-      "url": "https://github.com/raku-communit-modules/Pod-To-HTML",
+      "url": "https://github.com/raku-community-modules/Pod-To-HTML",
       "type": "distribution"
     },
     {
-      "url": "https://raku.land/zef:raku-community-modules/Pod::To::HTML?v=0.9.0",
+      "url": "https://raku.land/zef:raku-community-modules/Pod::To::HTML?v=0.9.1",
       "type": "documentation"
     },
     {
@@ -702,7 +698,7 @@
       "type": "license"
     },
     {
-      "url": "https://github.com/raku-communit-modules/Pod-To-HTML/archive/refs/tags/0.9.0.zip",
+      "url": "https://github.com/raku-community-modules/Pod-To-HTML/archive/refs/tags/0.9.1.zip",
       "type": "source-distribution"
     },
     {
@@ -725,7 +721,7 @@
       ]
     },
     {
-      "ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.12",
+      "ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
       "dependsOn": [
         "Rakudo"
       ]
